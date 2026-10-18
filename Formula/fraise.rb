@@ -5,13 +5,13 @@
 class Fraise < Formula
   desc "In-memory temporal graph database for AI agents memory"
   homepage "https://github.com/FraiseHQ/fraise"
-  version "0.3.3"
+  version "0.3.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.3/fraise_0.3.3_darwin_amd64.tar.gz"
-      sha256 "153dcf8c856348234c9fbb3d39ab9a23a339e12301b04af31854976db4647dec"
+      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.4/fraise_0.3.4_darwin_amd64.tar.gz"
+      sha256 "f3f8df961468f6ef6dc068046170cd1f8dec67d995f694ec14e771bfdf9c8e18"
 
       define_method(:install) do
         bin.install "fraise"
@@ -19,8 +19,8 @@ class Fraise < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.3/fraise_0.3.3_darwin_arm64.tar.gz"
-      sha256 "d9acf15ef99738b35f3602999d69c6c08d5d984b7dd1b88e73760521c70156c8"
+      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.4/fraise_0.3.4_darwin_arm64.tar.gz"
+      sha256 "02d288097a9d7c48f7f72608117eec59d86ca7559452408356ed439ba0f9d368"
 
       define_method(:install) do
         bin.install "fraise"
@@ -31,16 +31,16 @@ class Fraise < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.3/fraise_0.3.3_linux_amd64.tar.gz"
-      sha256 "6355eb26ad80b11162ddba190923b22d765d66913d5138038658279f7657d9cd"
+      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.4/fraise_0.3.4_linux_amd64.tar.gz"
+      sha256 "949865c62f9c3a05aa4d9039eb4c0b0673e07c3dabd10d062f1a601058c716a9"
       define_method(:install) do
         bin.install "fraise"
         (etc/"fraise").install "fraise.config.toml"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.3/fraise_0.3.3_linux_arm64.tar.gz"
-      sha256 "b9f7d6e78d4a520bab9ce70f9a1dd4f4b4292abb934cf05d2e9c3966cd6c6d63"
+      url "https://github.com/FraiseHQ/fraise/releases/download/v0.3.4/fraise_0.3.4_linux_arm64.tar.gz"
+      sha256 "ad2cfbb3f59f248627a3401a9ae9241cf64cc43ca41c64d2f2df547c11eada37"
       define_method(:install) do
         bin.install "fraise"
         (etc/"fraise").install "fraise.config.toml"
